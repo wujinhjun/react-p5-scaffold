@@ -14,9 +14,7 @@ const App = () => {
 
 
     return (
-        <div className="App">
-            <div ref={canvasRef} />
-        </div>
+        <div ref={canvasRef} className="p5" />
     );
 }
 
