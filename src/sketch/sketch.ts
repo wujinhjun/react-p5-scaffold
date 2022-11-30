@@ -1,18 +1,18 @@
 import p5 from "p5";
 
-const mySketch = (parentElement: HTMLElement, widthSize = 300, heightSize = 300) => (sketch: p5) => {
+const mySketch = (parentElement: HTMLElement) => (p: p5) => {
 
-    sketch.setup = () => {
-        sketch.createCanvas(widthSize, heightSize);
-        sketch.background(0, 0, 0);
+    p.setup = () => {
+        p.createCanvas(300, 300);
+        p.background(0, 0, 0);
     }
 
-    sketch.draw = () => {
-        sketch.clear(255, 255, 255, 0);
-        sketch.background(0, 0, 0);
-        sketch.fill(255);
-        sketch.rectMode("center");
-        sketch.rect(widthSize / 2, heightSize / 2, 300, 300);
+    p.draw = () => {
+        p.clear(255, 255, 255, 0);
+        p.background(0, 0, 0);
+        p.fill(255);
+        p.rectMode("center");
+        p.rect(p.width / 2, p.height / 2, 200, 200);
     }
 }
 
