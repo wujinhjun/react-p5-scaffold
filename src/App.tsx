@@ -4,11 +4,10 @@ import sketch from "./sketch";
 import p5 from "p5";
 
 const App = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const canvasDivElement: HTMLElement =
-      canvasRef.current as unknown as HTMLElement;
+    const canvasDivElement: HTMLDivElement = canvasRef.current!;
     new p5(sketch(canvasDivElement), canvasDivElement);
   }, []);
 
